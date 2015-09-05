@@ -1,7 +1,7 @@
 " Vim indent file
 " Language: etml
 " Maintainer: YuZakuro <zakuro@yuzakuro.me>
-" Last Change: 2015 Sep 05
+" Last Change: 2015 Sep 06
 
 if exists('b:did_indent')
   finish
@@ -14,6 +14,31 @@ set cpo&vim
 setlocal indentexpr=GetEtmlIndent(v:lnum)
 setlocal indentkeys=o,O,*<Return>,<>>,<<>,/,{,}
 
+
+if !exists('b:etml_noindent_tags')
+  " <list:item>
+  "   <i: item1>
+  "   <i: item2>
+  " </list>
+  "
+  " <declaration:calculation>
+  "   <pls:敗残者の物語>
+  "   <pls:脱走者の物語>
+  "   <eql:つまりわたし>
+  " </declaration>
+  "
+  " <question>
+  "   <q:question>
+  "   <a:answer>
+  " </question>
+  "
+  " <definition>
+  "   <i:大人になること、それは>
+  "   <d:WatchMe を身体に入れて>
+  "   <d:どこかの生府の構成員になって>
+  " <definition>
+  let b:etml_noindent_tags = ['a', 'd', 'ex', 'pls', 'q', 'i']
+endif
 
 if !exists('b:etml_indent_open')
   let b:etml_indent_open = '.\{-}<\a'
