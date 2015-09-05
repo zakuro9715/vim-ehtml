@@ -1,0 +1,18 @@
+<?Emotion-in-Text Markup Language:version=1.2:encoding=UTF-8?>
+<!DOCTYPE etml PUBLIC :-//WENC//DTD ETML 1.2 transitional//EN>
+<etml:lang=ja>
+<body>
+  <outline>
+    vim-etml is etml syntax highlighting for vim.
+  </outline>
+
+  <dictionary>
+    <item>etml</item>
+    <description>
+      etml is Emotion-in-Text Markup Language.
+      etml is used in &lt;harmony /&gt;, a SF book written by Project Itoh(Ito Kekaku, 伊藤計劃).
+      And &lt;harmony /&gt; written with etml.
+    </description>
+  </dictionary>
+</body>
+</etml>
